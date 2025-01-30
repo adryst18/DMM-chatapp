@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajustes de Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Sección de Foto de Perfil -->
+    <ion-item>
+      <ion-avatar aria-hidden="true" slot="start">
+        <img alt="Foto de perfil" [src]="avatarUrl" />
+      </ion-avatar>
+      <ion-label>
+        <strong>Cambiar foto de perfil</strong>
+      </ion-label>
+    </ion-item>
+
+    <!-- Sección de Nombre -->
+    <ion-item>
+      <ion-label>
+        <strong>Nombre</strong>
+        <br />
+        <ion-note color="medium" class="ion-text-wrap">{{username}}</ion-note>
+      </ion-label>
+      <ion-button fill="clear" slot="end" (click)="editUsername()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <!-- Sección de Estado -->
+    <ion-item>
+      <ion-label>
+        <strong>Estado</strong>
+        <br />
+        <ion-note color="medium" class="ion-text-wrap">{{status}}</ion-note>
+      </ion-label>
+      <ion-button fill="clear" slot="end" (click)="editStatus()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <!-- Sección de Información -->
+    <ion-item>
+      <ion-label>
+        <strong>Información</strong>
+        <br />
+        <ion-note color="medium" class="ion-text-wrap">{{info}}</ion-note>
+      </ion-label>
+    </ion-item>
+
+    <!-- Sección de Número de Teléfono -->
+    <ion-item>
+      <ion-label>
+        <strong>Número de teléfono</strong>
+        <br />
+        <ion-note color="medium" class="ion-text-wrap">{{phoneNumber}}</ion-note>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

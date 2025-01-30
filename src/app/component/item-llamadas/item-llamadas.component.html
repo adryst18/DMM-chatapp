@@ -1,0 +1,14 @@
+<ion-item>
+  <ion-avatar slot="start">
+    <img [src]="avatarUrl" />
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ username }}</h2>
+    <p>{{ date }}</p>
+  </ion-label>
+  <ion-icon
+    [name]="type === 'missed' ? 'call-missed' : type === 'incoming' ? 'call-received' : 'call-made'"
+    [color]="type === 'missed' ? 'danger' : 'success'"
+    slot="end"
+  ></ion-icon>
+</ion-item>
